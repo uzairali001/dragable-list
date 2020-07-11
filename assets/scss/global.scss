@@ -1,0 +1,72 @@
+@import "normalize";
+@import "theme";
+@import "utility";
+
+:root {
+  --background: #fcfcfc;
+  --text-color-normal: #333333;
+}
+
+::-moz-selection,
+::selection {
+  background-color: hsl(var(--hue), 65%, 30%);
+  text-shadow: none;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+body *{
+    margin: 3px 0;
+}
+
+html {  
+  background-color: var(--background);
+  color: var(--text-color-normal);
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.panel {
+  // background-color: var(--);
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: box-shadow .5s ease ;
+
+  &:hover {
+    box-shadow: 0 0px 5px 0 transparent;      
+  }
+}
+a{
+    color: var(--link-color);
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.highlight-text{
+  color: var(--text-color-highlight);
+}
+
+.rich-text{
+    color: var(--text-color-richer);
+
+}
+.light-text{
+    color: var(--text-color-light);
+}
+
+.error-text{
+    color: var(--error-color);
+}

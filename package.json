@@ -9,7 +9,7 @@
     "scss": "node-sass assets/scss/ -o assets/css/ ",
     "typescript": "tsc",
     "watch:scss": "onchange \"assets/scss/*.scss\" -- npm run scss",
-    "watch:typescript": "onchange \"assets/typescripts/*.ts\" -- npm run typescript",
+    "watch:typescript": "onchange \"assets/typescript/*.ts\" -- npm run typescript",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\" \"npm run watch:typescript\" ",
     "clean": "rimraf dist",
     "copyfonts:dev": "copyfiles -f _/font-awesome/webfonts/* assets/css/webfonts/ && copyfiles -f _/font-awesome/css/* assets/css/font-awesome/",
@@ -32,13 +32,13 @@
     "url": "https://github.com/uzairali001/dragable-list/issues"
   },
   "homepage": "https://github.com/uzairali001/dragable-list#readme",
-  "dependencies": {
+  "devDependencies": {
+    "parallelshell": "^3.0.1",
     "cssmin": "^0.4.3",
     "htmlmin": "0.0.7",
     "lite-server": "^2.5.4",
     "node-sass": "^4.14.1",
     "onchange": "^7.0.2",
-    "parallelshell": "^3.0.2",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.6",
     "uglifyjs": "^2.4.11",

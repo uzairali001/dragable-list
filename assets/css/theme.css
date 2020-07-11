@@ -1,0 +1,54 @@
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important; }
+
+html {
+  --hue: 210;
+  /* Blue */
+  --accent-hue: 25;
+  /* Orange */
+  --text-color-normal: hsl(var(--hue), 77%, 17%);
+  --text-color-light: hsl(var(--hue), 61%, 40%);
+  --text-color-richer: hsl(var(--hue), 44%, 26%);
+  --text-color-highlight: hsl(var(--accent-hue), 74%, 51%);
+  --link-color: hsl(var(--hue), 86%, 45%);
+  --accent-color: hsl(var(--accent-hue), 88%, 58%);
+  --error-color: rgb(240, 50, 50);
+  --button-background: hsl(var(--hue), 77%, 35%);
+  --button-text-color: white;
+  --background: hsl(var(--hue), 36%, 95%);
+  --popup-shadow: 0 5px 16px rgba(0, 0, 0, 0.25); }
+
+html[data-theme="dark"] {
+  --hue: 210;
+  /* Blue */
+  --accent-hue: 25;
+  /* Orange */
+  --text-color-normal: hsl(var(--hue), 10%, 62%);
+  --text-color-light: hsl(var(--hue), 15%, 35%);
+  --text-color-richer: hsl(var(--hue), 50%, 72%);
+  --text-color-highlight: hsl(var(--accent-hue), 70%, 45%);
+  --link-color: hsl(var(--hue), 90%, 70%);
+  --accent-color: hsl(var(--accent-hue), 100%, 70%);
+  --error-color: rgb(240, 50, 50);
+  --button-background: hsl(var(--hue), 63%, 43%);
+  --button-text-color: black;
+  --background: hsl(var(--hue), 20%, 12%);
+  --popup-shadow: 0 5px 32px black; }
+
+html[data-theme="high-contrast"] {
+  --text-color-normal: white;
+  --text-color-light: white;
+  --text-color-richer: white;
+  --text-color-highlight: white;
+  --link-color: white;
+  --bright-color: white;
+  --error-color: white;
+  --button-background: white;
+  --button-text-color: black;
+  --background: black;
+  --popup-background: black;
+  --popup-shadow: 0 0 5px white, 0 0 5px white; }
