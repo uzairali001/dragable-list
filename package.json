@@ -1,0 +1,47 @@
+{
+  "name": "dragable-list-item",
+  "version": "1.0.0",
+  "description": "List that can be resorted by draging",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run watch:all",
+    "lite": "lite-server",
+    "scss": "node-sass assets/scss/ -o assets/css/ ",
+    "typescript": "tsc",
+    "watch:scss": "onchange \"assets/scss/*.scss\" -- npm run scss",
+    "watch:typescript": "onchange \"assets/typescripts/*.ts\" -- npm run typescript",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\" \"npm run watch:typescript\" ",
+    "clean": "rimraf dist",
+    "copyfonts:dev": "copyfiles -f _/font-awesome/webfonts/* assets/css/webfonts/ && copyfiles -f _/font-awesome/css/* assets/css/font-awesome/",
+    "copyfonts": "copyfiles -f assets/css/webfonts/* dist/assets/css/fonts/ && copyfiles -f assets/css/font-awesome/* dist/assets/css/font-awesome/ ",
+    "imagemin": "imagemin assets/img dist/assets/img",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build": "npm run clean && npm run copyfonts && npm run scss && npm run imagemin && npm run usemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uzairali001/dragable-list.git"
+  },
+  "keywords": [
+    "Dragable",
+    "List"
+  ],
+  "author": "Uzair Ali",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/uzairali001/dragable-list/issues"
+  },
+  "homepage": "https://github.com/uzairali001/dragable-list#readme",
+  "dependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.2",
+    "parallelshell": "^3.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.6",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
+  }
+}
