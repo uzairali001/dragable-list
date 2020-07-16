@@ -12,7 +12,7 @@
     "watch:typescript": "onchange \"assets/typescript/*.ts\" -- npm run typescript",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\" \"npm run watch:typescript\" ",
     "clean": "rimraf dist",
-    "copyfonts:dev": "copyfiles -f _/font-awesome/webfonts/* assets/css/webfonts/ && copyfiles -f _/font-awesome/css/* assets/css/font-awesome/",
+    "copyfonts:dev": "copyfiles -f _/font-awesome/webfonts/* assets/vendor/font-awesome/webfonts/ && copyfiles -f _/font-awesome/css/* assets/vendor/font-awesome/css/",
     "copyfonts": "copyfiles -f assets/css/webfonts/* dist/assets/css/fonts/ && copyfiles -f assets/css/font-awesome/* dist/assets/css/font-awesome/ ",
     "imagemin": "imagemin assets/img dist/assets/img",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",

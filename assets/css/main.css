@@ -542,9 +542,12 @@ html.color-theme-in-transition *:after {
 html {
   --hue: 210;
   /* Blue */
-  --accent-hue: 25;
-  /* Orange */
+  --accent-hue: 5;
+  /* Red */
+  --primary-color: hsl(var(--hue), 95%, 50%);
+  --primary-border: hsl(var(--hue), 95%, 50%, 0.5);
   --text-color-normal: hsl(var(--hue), 77%, 17%);
+  --text-color-lighter: hsl(var(--hue), 20%, 50%);
   --text-color-light: hsl(var(--hue), 61%, 40%);
   --text-color-richer: hsl(var(--hue), 44%, 26%);
   --text-color-highlight: hsl(var(--accent-hue), 74%, 51%);
@@ -554,24 +557,42 @@ html {
   --button-background: hsl(var(--hue), 77%, 35%);
   --button-text-color: white;
   --background: hsl(var(--hue), 36%, 95%);
-  --popup-shadow: 0 5px 16px rgba(0, 0, 0, 0.25); }
+  --panel-background: hsl(var(--hue), 20%, 92%);
+  --popup-shadow: 0 5px 16px rgba(0, 0, 0, 0.25);
+  --shadow-elevation-1: 0 0px 5px rgba(0, 0, 0, 0.5);
+  --warning-color: #ff9800;
+  --warning-color-hover: #dd8502;
+  --text-color-invert: white;
+  --action-menu-background: rgba(255, 255, 255, 0.4);
+  --action-menu-background-hover: hsl(var(--hue), 95%, 50%, 0.8);
+  --action-menu-background-blur: blur(5px); }
 
 html[data-theme="dark"] {
   --hue: 210;
   /* Blue */
-  --accent-hue: 25;
-  /* Orange */
+  --accent-hue: 5;
+  /* Red */
+  --primary-color: hsl(var(--hue), 60%, 50%);
+  --primary-border: hsl(var(--hue), 60%, 50%, 0.5);
   --text-color-normal: hsl(var(--hue), 10%, 62%);
   --text-color-light: hsl(var(--hue), 15%, 35%);
   --text-color-richer: hsl(var(--hue), 50%, 72%);
-  --text-color-highlight: hsl(var(--accent-hue), 70%, 45%);
+  --text-color-highlight: hsl(var(--accent-hue), 65%, 50%);
   --link-color: hsl(var(--hue), 90%, 70%);
   --accent-color: hsl(var(--accent-hue), 100%, 70%);
   --error-color: rgb(240, 50, 50);
   --button-background: hsl(var(--hue), 63%, 43%);
   --button-text-color: black;
   --background: hsl(var(--hue), 20%, 12%);
-  --popup-shadow: 0 5px 32px black; }
+  --panel-background: hsl(var(--hue), 20%, 16%);
+  --popup-shadow: 0 5px 32px black;
+  --shadow-elevation-1: 0 0px 5px rgba(0, 0, 0, 0.8);
+  --warning-color: #ff9800;
+  --warning-color-hover: #dd8502;
+  --text-color-invert: black;
+  --action-menu-background: hsla(var(--hue), 10%, 39%, 0.4);
+  --action-menu-background-hover: hsl(var(--hue), 95%, 50%, 0.8);
+  --action-menu-background-blur: blur(5px); }
 
 html[data-theme="high-contrast"] {
   --text-color-normal: white;
@@ -602,10 +623,6 @@ html[data-theme="high-contrast"] {
 .height-100vh {
   height: 100vh; }
 
-:root {
-  --background: #fcfcfc;
-  --text-color-normal: #333333; }
-
 ::-moz-selection,
 ::selection {
   background-color: hsl(var(--hue), 65%, 30%);
@@ -613,9 +630,6 @@ html[data-theme="high-contrast"] {
 
 body {
   font-family: "Cairo", sans-serif; }
-
-body * {
-  margin: 3px 0; }
 
 html {
   background-color: var(--background);
@@ -643,7 +657,7 @@ a {
   display: inline-block;
   text-decoration: underline; }
 
-.highlight-text {
+.text-highlight {
   color: var(--text-color-highlight); }
 
 .rich-text {
@@ -654,3 +668,183 @@ a {
 
 .error-text {
   color: var(--error-color); }
+
+.text-size-small {
+  font-size: 0.8; }
+
+.text-size-medium {
+  font-size: 1.4; }
+
+.text-size-large {
+  font-size: 1.6; }
+
+.text-size-xlarge {
+  font-size: 1.8; }
+
+.text-size-xxlarge {
+  font-size: 2; }
+
+.display-grid {
+  display: grid;
+  column-gap: 20px; }
+
+.grid-column-2 {
+  grid-template-columns: repeat(2, 1fr); }
+
+.grid-column-3 {
+  grid-template-columns: repeat(3, 1fr); }
+
+.grid-column-4 {
+  grid-template-columns: repeat(4, 1fr); }
+
+.grid-column-5 {
+  grid-template-columns: repeat(5, 1fr); }
+
+.grid-column-6 {
+  grid-template-columns: repeat(6, 1fr); }
+
+.grid-column-7 {
+  grid-template-columns: repeat(7, 1fr); }
+
+.grid-column-8 {
+  grid-template-columns: repeat(8, 1fr); }
+
+.grid-column-9 {
+  grid-template-columns: repeat(9, 1fr); }
+
+.grid-column-10 {
+  grid-template-columns: repeat(0, 1fr); }
+
+.column-heading {
+  font-size: 2rem;
+  color: var(--text-color-highlight);
+  text-align: center; }
+
+main {
+  padding: 50px; }
+
+.tag-container .tag-item {
+  padding: 10px;
+  background: var(--primary-color);
+  display: inline-block;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin: 5px 0; }
+
+.draggable-item {
+  padding: 20px;
+  margin: 20px 0;
+  background: var(--panel-background);
+  border-radius: 15px; }
+
+.draggable-item-heading {
+  margin-bottom: 10px; }
+
+.draggable-item-heading .item-heading-main {
+  font-size: 26px;
+  color: var(--primary-color); }
+
+.draggable-item-heading .item-heading-sub {
+  font-size: 18px;
+  color: var(--text-color-lighter);
+  margin: 5px 0; }
+
+.draggable-item-heading .item-heading-detail {
+  font-size: 18px;
+  color: var(--text-color-richer);
+  margin: 5px 0; }
+
+.dragable-item-data {
+  position: relative;
+  border-top: 2px dashed var(--text-color-highlight);
+  border-bottom: 2px dashed var(--text-color-highlight);
+  padding: 10px 0;
+  padding-left: 20px; }
+
+.dragable-item-data .schedule-item {
+  padding: 10px 0;
+  position: relative; }
+
+.dragable-item-data .schedule-item:not(:last-of-type) {
+  border-bottom: 2px solid var(--primary-border); }
+
+.action-menu-container {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  transition: opacity 0.5s ease, visibility 0.5s ease; }
+  .action-menu-container.action-menu-open .action-items-container {
+    box-shadow: var(--shadow-elevation-1);
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden; }
+  .action-menu-container .action-button {
+    color: var(--text-color-rich);
+    font-size: 1.2rem;
+    cursor: pointer; }
+  .action-menu-container .action-items-container {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+    z-index: 10;
+    border-radius: 5px;
+    min-width: 140px;
+    background-color: var(--action-menu-background);
+    backdrop-filter: var(--action-menu-background-blur); }
+    .action-menu-container .action-items-container .action-items {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s, visibility 0.5s ease, transform 0.5s ease;
+      transform-origin: top; }
+      .action-menu-container .action-items-container .action-items:first-of-type {
+        transform: translateX(-36%) scale(0.7); }
+      .action-menu-container .action-items-container .action-items.action-items-active {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1); }
+        .action-menu-container .action-items-container .action-items.action-items-active:first-of-type {
+          transform: translateX(0%) scale(1); }
+      .action-menu-container .action-items-container .action-items:not(:first-of-type) {
+        position: absolute;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        transform: scale(1.4); }
+        .action-menu-container .action-items-container .action-items:not(:first-of-type).action-items-active {
+          transform: translateX(-100%); }
+      .action-menu-container .action-items-container .action-items .action-item {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        color: var(--text-color-normal);
+        transition: background 0.25s ease, color 0.25s ease;
+        display: flex; }
+        .action-menu-container .action-items-container .action-items .action-item:hover {
+          background: var(--action-menu-background-hover);
+          color: var(--text-color-white); }
+        .action-menu-container .action-items-container .action-items .action-item .action-item-icon {
+          margin-right: 10px; }
+
+.item-container .item-heading {
+  font-size: 1.2rem;
+  color: var(--text-color-highlight);
+  vertical-align: middle;
+  margin-right: 10px;
+  display: inline-block;
+  line-height: 2rem; }
+
+.item-container .item-value {
+  font-size: 1.4rem;
+  vertical-align: middle; }
+
+.item-container .item-values {
+  font-size: 1.4rem; }
+
+/* .item-container .item-values.text-small{
+    font-size: 1rem;
+  }
+  .item-container .item-values.text-xsmall{
+    font-size: 0.8rem;  
+  } */

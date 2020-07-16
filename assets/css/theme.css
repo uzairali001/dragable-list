@@ -8,9 +8,12 @@ html.color-theme-in-transition *:after {
 html {
   --hue: 210;
   /* Blue */
-  --accent-hue: 25;
-  /* Orange */
+  --accent-hue: 5;
+  /* Red */
+  --primary-color: hsl(var(--hue), 95%, 50%);
+  --primary-border: hsl(var(--hue), 95%, 50%, 0.5);
   --text-color-normal: hsl(var(--hue), 77%, 17%);
+  --text-color-lighter: hsl(var(--hue), 20%, 50%);
   --text-color-light: hsl(var(--hue), 61%, 40%);
   --text-color-richer: hsl(var(--hue), 44%, 26%);
   --text-color-highlight: hsl(var(--accent-hue), 74%, 51%);
@@ -20,24 +23,42 @@ html {
   --button-background: hsl(var(--hue), 77%, 35%);
   --button-text-color: white;
   --background: hsl(var(--hue), 36%, 95%);
-  --popup-shadow: 0 5px 16px rgba(0, 0, 0, 0.25); }
+  --panel-background: hsl(var(--hue), 20%, 92%);
+  --popup-shadow: 0 5px 16px rgba(0, 0, 0, 0.25);
+  --shadow-elevation-1: 0 0px 5px rgba(0, 0, 0, 0.5);
+  --warning-color: #ff9800;
+  --warning-color-hover: #dd8502;
+  --text-color-invert: white;
+  --action-menu-background: rgba(255, 255, 255, 0.4);
+  --action-menu-background-hover: hsl(var(--hue), 95%, 50%, 0.8);
+  --action-menu-background-blur: blur(5px); }
 
 html[data-theme="dark"] {
   --hue: 210;
   /* Blue */
-  --accent-hue: 25;
-  /* Orange */
+  --accent-hue: 5;
+  /* Red */
+  --primary-color: hsl(var(--hue), 60%, 50%);
+  --primary-border: hsl(var(--hue), 60%, 50%, 0.5);
   --text-color-normal: hsl(var(--hue), 10%, 62%);
   --text-color-light: hsl(var(--hue), 15%, 35%);
   --text-color-richer: hsl(var(--hue), 50%, 72%);
-  --text-color-highlight: hsl(var(--accent-hue), 70%, 45%);
+  --text-color-highlight: hsl(var(--accent-hue), 65%, 50%);
   --link-color: hsl(var(--hue), 90%, 70%);
   --accent-color: hsl(var(--accent-hue), 100%, 70%);
   --error-color: rgb(240, 50, 50);
   --button-background: hsl(var(--hue), 63%, 43%);
   --button-text-color: black;
   --background: hsl(var(--hue), 20%, 12%);
-  --popup-shadow: 0 5px 32px black; }
+  --panel-background: hsl(var(--hue), 20%, 16%);
+  --popup-shadow: 0 5px 32px black;
+  --shadow-elevation-1: 0 0px 5px rgba(0, 0, 0, 0.8);
+  --warning-color: #ff9800;
+  --warning-color-hover: #dd8502;
+  --text-color-invert: black;
+  --action-menu-background: hsla(var(--hue), 10%, 39%, 0.4);
+  --action-menu-background-hover: hsl(var(--hue), 95%, 50%, 0.8);
+  --action-menu-background-blur: blur(5px); }
 
 html[data-theme="high-contrast"] {
   --text-color-normal: white;

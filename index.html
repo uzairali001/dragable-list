@@ -1,51 +1,872 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
-
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widivh=device-widivh, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/vendor/font-awesome/css/all.min.css">
+    <link href="./assets/css/main.css" rel="stylesheet">
 </head>
-
 <body>
+	<button id="theme-button">Change Theme</button>
+    <main style="--icon-primary-color: red">
+        <div class="display-grid grid-column-4">
+            <div class="grid-column">
+                <div class="column-heading">
+                    Week 1
+                </div>
+                <div class="draggable-item-list">            
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 01</div>
+                            <div class="item-heading-main">Monday</div>
+                            <div class="item-heading-detail">1st june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="action-menu-container action-menu-open">
+                                    <div class="action-button">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="action-items-container">
+										<div class="action-items action-items-active">
+											<div class="action-item" data-action-menu-for="weeks">
+												<i class="fas fa-arrows-alt action-item-icon"></i>
+												<span class="action-item-text">Move</span>												
+											</div>
+											<div class="action-item">
+												<i class="far fa-trash-alt action-item-icon"></i>
+												<span class="action-item-text">Delete</span>
+											</div>
+										</div> <!-- .action-items -->
+										<div class="action-items" data-action-menu="weeks">
+											<div class="action-item">
+												<i class="far fa-calendar-alt action-item-icon"></i>
+												<span class="action-item-text">Week 1</span>
+											</div>
+											<div class="action-item">
+												<i class="far fa-calendar-alt action-item-icon"></i>
+												<span class="action-item-text">Week 2</span>
+											</div>
+											<div class="action-item">
+												<i class="far fa-calendar-alt action-item-icon"></i>
+												<span class="action-item-text">Week 3</span>
+											</div>
+											<div class="action-item">
+												<i class="far fa-calendar-alt action-item-icon"></i>
+												<span class="action-item-text">Week 4</span>
+											</div>
+											<div class="action-item">
+												<i class="far fa-calendar-alt action-item-icon"></i>
+												<span class="action-item-text">Week 5</span>
+											</div>
+										</div> <!-- .action-items -->
+									</div> <!-- .action-items-container -->
+                                </div> <!-- .action-menu-container -->
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor E</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor R</span>
+                                        <span class="tag-item">Doctor Q</span>
+                                    </div>
+                                </div>
+                            </div> <!-- .schedule-item -->
+                            <div class="schedule-item" draggable="true">
+                                <div class="action-items-container ">
+                                    <div class="action-button">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="action-items">
+                                        <div class="action-item">
+                                            <i class="fas fa-arrows-alt action-item-icon"></i>
+                                            <span class="action-item-text">Move</span>
+                                        </div>
+                                        <div class="action-item">
+                                            <i class="far fa-trash-alt action-item-icon"></i>
+                                            <span class="action-item-text">Delete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor E</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor R</span>
+                                        <span class="tag-item">Doctor Q</span>
+                                    </div>
+                                </div>
+                            </div> <!-- .schedule-item -->
+                            <div class="schedule-item" draggable="true">
+                                <div class="action-items-container ">
+                                    <div class="action-button">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="action-items">
+                                        <div class="action-item">
+                                            <i class="fas fa-arrows-alt action-item-icon"></i>
+                                            <span class="action-item-text">Move</span>
+                                        </div>
+                                        <div class="action-item">
+                                            <i class="far fa-trash-alt action-item-icon"></i>
+                                            <span class="action-item-text">Delete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor E</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor R</span>
+                                        <span class="tag-item">Doctor Q</span>
+                                    </div>
+                                </div>
+                            </div> <!-- .schedule-item -->
+                        </div> <!-- .dragable-item-data -->
+                    </div> <!-- .draggable-item -->
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 02</div>
+                            <div class="item-heading-main">Tuesday</div>
+                            <div class="item-heading-detail">2nd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor A</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 03</div>
+                            <div class="item-heading-main">Wednesday</div>
+                            <div class="item-heading-detail">3rd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor U</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 04</div>
+                            <div class="item-heading-main">Thursday</div>
+                            <div class="item-heading-detail">4th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor O</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor G</span>
+                                        <span class="tag-item">Doctor A</span>
+                                        <span class="tag-item">Doctor D</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor M</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor Y</span>
+                                        <span class="tag-item">Doctor Q</span>
+                                        <span class="tag-item">Doctor K</span>
+                                        <span class="tag-item">Doctor F</span>
+                                        <span class="tag-item">Doctor Z</span>
+                                        <span class="tag-item">Doctor C</span>
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor S</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 05</div>
+                            <div class="item-heading-main">Friday</div>
+                            <div class="item-heading-detail">5th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor G</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 06</div>
+                            <div class="item-heading-main">Saturday</div>
+                            <div class="item-heading-detail">6th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor T</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor P</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 07</div>
+                            <div class="item-heading-main">Sunday</div>
+                            <div class="item-heading-detail">7th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div> <!-- .item-container -->
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor F</span>
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor I</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .draggable-item-data -->
+                    </div> <!-- .draggable-item -->
+                </div> <!-- .draggable-item-list -->
+            </div> <!-- .grid-column -->
+            <div class="grid-column">
+                <div class="column-heading">
+                    Week 2
+                </div>
+                <div class="draggable-item-list">            
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 01</div>
+                            <div class="item-heading-main">Monday</div>
+                            <div class="item-heading-detail">1st june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor E</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor R</span>
+                                        <span class="tag-item">Doctor Q</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 02</div>
+                            <div class="item-heading-main">Tuesday</div>
+                            <div class="item-heading-detail">2nd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor A</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 03</div>
+                            <div class="item-heading-main">Wednesday</div>
+                            <div class="item-heading-detail">3rd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor U</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 04</div>
+                            <div class="item-heading-main">Thursday</div>
+                            <div class="item-heading-detail">4th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor O</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor G</span>
+                                        <span class="tag-item">Doctor G</span>
+                                        <span class="tag-item">Doctor D</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor M</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor Y</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 05</div>
+                            <div class="item-heading-main">Friday</div>
+                            <div class="item-heading-detail">5th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor G</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 06</div>
+                            <div class="item-heading-main">Saturday</div>
+                            <div class="item-heading-detail">6th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor T</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor P</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 07</div>
+                            <div class="item-heading-main">Sunday</div>
+                            <div class="item-heading-detail">7th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div> <!-- .item-container -->
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor F</span>
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor I</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .draggable-item-data -->
+                    </div> <!-- .draggable-item -->
+                </div> <!-- .draggable-item-list -->
+            </div> <!-- .grid-column -->
+            <div class="grid-column">
+                <div class="column-heading">
+                    Week 3
+                </div>
+                <div class="draggable-item-list">            
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 01</div>
+                            <div class="item-heading-main">Monday</div>
+                            <div class="item-heading-detail">1st june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor E</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor R</span>
+                                        <span class="tag-item">Doctor Q</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 02</div>
+                            <div class="item-heading-main">Tuesday</div>
+                            <div class="item-heading-detail">2nd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor A</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 03</div>
+                            <div class="item-heading-main">Wednesday</div>
+                            <div class="item-heading-detail">3rd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor U</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 04</div>
+                            <div class="item-heading-main">Thursday</div>
+                            <div class="item-heading-detail">4th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor O</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor G</span>
+                                        <span class="tag-item">Doctor G</span>
+                                        <span class="tag-item">Doctor D</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor M</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor Y</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 05</div>
+                            <div class="item-heading-main">Friday</div>
+                            <div class="item-heading-detail">5th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor G</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 06</div>
+                            <div class="item-heading-main">Saturday</div>
+                            <div class="item-heading-detail">6th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor T</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor P</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 07</div>
+                            <div class="item-heading-main">Sunday</div>
+                            <div class="item-heading-detail">7th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div> <!-- .item-container -->
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor F</span>
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor I</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .draggable-item-data -->
+                    </div> <!-- .draggable-item -->
+                </div> <!-- .draggable-item-list -->
+            </div> <!-- .grid-column -->
+            <div class="grid-column">
+                <div class="column-heading">
+                    Week 4
+                </div>
+                <div class="draggable-item-list">            
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 01</div>
+                            <div class="item-heading-main">Monday</div>
+                            <div class="item-heading-detail">1st june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor E</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor R</span>
+                                        <span class="tag-item">Doctor Q</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 02</div>
+                            <div class="item-heading-main">Tuesday</div>
+                            <div class="item-heading-detail">2nd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor A</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 03</div>
+                            <div class="item-heading-main">Wednesday</div>
+                            <div class="item-heading-detail">3rd june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor U</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 04</div>
+                            <div class="item-heading-main">Thursday</div>
+                            <div class="item-heading-detail">4th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor O</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor G</span>
+                                        <span class="tag-item">Doctor G</span>
+                                        <span class="tag-item">Doctor D</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor M</span>
+                                        <span class="tag-item">Doctor B</span>
+                                        <span class="tag-item">Doctor Y</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 05</div>
+                            <div class="item-heading-main">Friday</div>
+                            <div class="item-heading-detail">5th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor G</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 06</div>
+                            <div class="item-heading-main">Saturday</div>
+                            <div class="item-heading-detail">6th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div>
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor T</span>
+                                        <span class="tag-item">Doctor J</span>
+                                        <span class="tag-item">Doctor L</span>
+                                        <span class="tag-item">Doctor P</span>
+                                        <span class="tag-item">Doctor C</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+        
+                    <div class="draggable-item">
+                        <div class="draggable-item-heading">
+                            <div class="item-heading-sub"># 07</div>
+                            <div class="item-heading-main">Sunday</div>
+                            <div class="item-heading-detail">7th june 2020</div>
+                        </div>
+                        <div class="dragable-item-data">
+                            <div class="schedule-item" draggable="true">
+                                <div class="item-container">
+                                    <span class="item-heading">Visit Type</span>
+                                    <span class="item-value">Local</span>
+                                </div> <!-- .item-container -->
+                                <div class="item-container">
+                                    <span class="item-heading">Doctors</span>
+                                    <div class="item-values tag-container tag-draggable text-small">
+                                        <span class="tag-item">Doctor F</span>
+                                        <span class="tag-item">Doctor H</span>
+                                        <span class="tag-item">Doctor I</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .draggable-item-data -->
+                    </div> <!-- .draggable-item -->
+                </div> <!-- .draggable-item-list -->
+            </div> <!-- .grid-column -->
+        </div>
+    </main>
 
-  <!-- Add your site or application content here -->
-  <section class="display-flex align-item-center justify-content-center height-100vh flex-direction-column panel">
-    <h1>Welcome, sir</h1>
-    <p>Hello world! This is <span class="highlight-text">HTML5</span> Boilerplate.</p>
-    <p class="rich-text">This is the rich text</p>
-    <p class="light-text">This is the light text</p>
-    <p class="error-text">Error</p>
-    <a>I'm a link</a>
-    <button>Click me</button>
-  </section>
-  <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script> -->
-  <script type="module" src="assets/js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <!-- <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script> -->
+    <script type="module" src="./assets/js/utility.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
-
 </html>

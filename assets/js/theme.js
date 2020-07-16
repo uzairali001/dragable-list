@@ -9,3 +9,10 @@ export default class themeService {
         }, 1000);
     }
 }
+export var Themes;
+(function (Themes) {
+    Themes["Default"] = "default";
+    Themes["Light"] = "light";
+    Themes["Dark"] = "dark";
+    Themes["HighContrast"] = "high-contrast";
+})(Themes || (Themes = {}));

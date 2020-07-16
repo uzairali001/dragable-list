@@ -2,10 +2,6 @@
 @import "theme";
 @import "utility";
 
-:root {
-  --background: #fcfcfc;
-  --text-color-normal: #333333;
-}
 
 ::-moz-selection,
 ::selection {
@@ -15,9 +11,6 @@
 
 body {
   font-family: "Cairo", sans-serif;
-}
-body *{
-    margin: 3px 0;
 }
 
 html {  
@@ -30,9 +23,6 @@ h1 {
   line-height: 3rem;
 }
 
-.panel {
-  // background-color: var(--);
-}
 
 button {
   background-color: var(--button-background);
@@ -55,7 +45,7 @@ a{
     text-decoration: underline;
 }
 
-.highlight-text{
+.text-highlight{
   color: var(--text-color-highlight);
 }
 
@@ -69,4 +59,60 @@ a{
 
 .error-text{
     color: var(--error-color);
+}
+
+
+
+.text-size-small {
+  font-size: 0.8;
+}
+.text-size-medium {
+  font-size: 1.4;
+}
+.text-size-large {
+  font-size: 1.6;
+}
+.text-size-xlarge {
+  font-size: 1.8;
+}
+.text-size-xxlarge {
+  font-size: 2;
+}
+
+.display-grid {
+  display: grid;
+  column-gap: 20px;
+}
+.grid-column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-column-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-column-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-column-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-column-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+.grid-column-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+.grid-column-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+.grid-column-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+.grid-column-10 {
+  grid-template-columns: repeat(0, 1fr);
+}
+
+.column-heading {
+  font-size: 2rem;
+  color: var(--text-color-highlight);
+  text-align: center;
 }

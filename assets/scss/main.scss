@@ -1,4 +1,181 @@
 @import "global";
 
+main {
+  padding: 50px;
+}
 
+// :root {
+//   --accent-color: #4caf50;
+//   --accent-color2: #f44336;
+//   --text-color-normal: #636363;
+//   --text-color-light: #8e8e8e;
+//   --text-highlight-color: #2196f3;
+// }
 
+.tag-container {
+}
+.tag-draggable .tag-item {
+}
+.tag-container .tag-item {
+  padding: 10px;
+  background: var(--primary-color);
+  display: inline-block;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin: 5px 0;
+}
+
+.draggable-item-list {
+}
+.draggable-item {
+  padding: 20px;
+  margin: 20px 0;
+  background: var(--panel-background);
+  border-radius: 15px;
+}
+.draggable-item-heading {
+  margin-bottom: 10px;
+}
+.draggable-item-heading .item-heading-main {
+  font-size: 26px;
+  color: var(--primary-color);
+}
+
+.draggable-item-heading .item-heading-sub {
+  font-size: 18px;
+  color: var(--text-color-lighter);
+  margin: 5px 0;
+}
+.draggable-item-heading .item-heading-detail {
+  font-size: 18px;
+  color: var(--text-color-richer);
+  margin: 5px 0;
+}
+.dragable-item-data {
+  position: relative;
+  border-top: 2px dashed var(--text-color-highlight);
+  border-bottom: 2px dashed var(--text-color-highlight);
+  padding: 10px 0;
+  padding-left: 20px;
+}
+
+.dragable-item-data .schedule-item {
+  padding: 10px 0;
+  position: relative;
+}
+.dragable-item-data .schedule-item:not(:last-of-type) {
+  border-bottom: 2px solid var(--primary-border);
+}
+
+.action-menu-container {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+  &.action-menu-open {
+    .action-items-container {
+      box-shadow: var(--shadow-elevation-1);
+      visibility: visible;
+      opacity: 1;
+      overflow: hidden;
+    }
+  }
+
+  .action-button {
+    color: var(--text-color-rich);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .action-items-container {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+    z-index: 10;
+    border-radius: 5px;
+    min-width: 140px;
+    background-color: var(--action-menu-background);
+    backdrop-filter: var(--action-menu-background-blur);
+    .action-items {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s, visibility 0.5s ease, transform 0.5s ease;
+      transform-origin: top;
+
+      &:first-of-type{
+        transform: translateX(-36%) scale(0.7);
+      }
+      
+      &.action-items-active{
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+
+        &:first-of-type{
+          transform: translateX(0%) scale(1);
+        }
+      }
+
+      &:not(:first-of-type){
+        position: absolute;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        transform: scale(1.4);
+
+        &.action-items-active{
+          transform: translateX(-100%);
+        }
+      }
+
+      
+
+      .action-item {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        color: var(--text-color-normal);
+        transition: background 0.25s ease, color 0.25s ease;
+        display: flex;
+
+        &:hover {
+          background: var(--action-menu-background-hover);
+          color: var(--text-color-white);
+        }
+
+        .action-item-icon {
+          margin-right: 10px;
+        } // .action-item-icon
+        .action-item-text {
+        } // .action-item-text
+      } // .action-item
+    } // .action-items
+  } // .action-items-container
+} // .action-menu-container
+
+.item-container {
+}
+.item-container .item-heading {
+  font-size: 1.2rem;
+  color: var(--text-color-highlight);
+  vertical-align: middle;
+  margin-right: 10px;
+  display: inline-block;
+  line-height: 2rem;
+}
+.item-container .item-value {
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+.item-container .item-values {
+  font-size: 1.4rem;
+}
+/* .item-container .item-values.text-small{
+    font-size: 1rem;
+  }
+  .item-container .item-values.text-xsmall{
+    font-size: 0.8rem;  
+  } */
