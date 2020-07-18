@@ -559,10 +559,12 @@ html {
   --background: hsl(var(--hue), 36%, 95%);
   --panel-background: hsl(var(--hue), 20%, 92%);
   --popup-shadow: 0 5px 16px rgba(0, 0, 0, 0.25);
-  --shadow-elevation-1: 0 0px 5px rgba(0, 0, 0, 0.5);
+  --shadow-elevation-1: 0 0px 8px rgba(0, 0, 0, 0.8);
   --warning-color: #ff9800;
   --warning-color-hover: #dd8502;
   --text-color-invert: white;
+  --action-menu-text-color: hsla(var(--hue), 100%, 20%);
+  --action-menu-text-color-hover: hsla(var(--hue), 10%, 100%);
   --action-menu-background: rgba(255, 255, 255, 0.4);
   --action-menu-background-hover: hsl(var(--hue), 95%, 50%, 0.8);
   --action-menu-background-blur: blur(5px); }
@@ -586,10 +588,12 @@ html[data-theme="dark"] {
   --background: hsl(var(--hue), 20%, 12%);
   --panel-background: hsl(var(--hue), 20%, 16%);
   --popup-shadow: 0 5px 32px black;
-  --shadow-elevation-1: 0 0px 5px rgba(0, 0, 0, 0.8);
+  --shadow-elevation-1: 0 0px 8px rgba(0, 0, 0, 0.8);
   --warning-color: #ff9800;
   --warning-color-hover: #dd8502;
   --text-color-invert: black;
+  --action-menu-text-color: hsla(var(--hue), 10%, 70%);
+  --action-menu-text-color-hover: hsla(var(--hue), 10%, 90%);
   --action-menu-background: hsla(var(--hue), 10%, 39%, 0.4);
   --action-menu-background-hover: hsl(var(--hue), 95%, 50%, 0.8);
   --action-menu-background-blur: blur(5px); }

@@ -1,4 +1,4 @@
-export default class themeService {
+export default class ThemeService {
     constructor() {
         this._activeTheme = Themes.Light;
     }
@@ -26,3 +26,4 @@ export var Themes;
     Themes["Dark"] = "dark";
     Themes["HighContrast"] = "high-contrast";
 })(Themes || (Themes = {}));
+//# sourceMappingURL=ThemeService.js.map

@@ -4,7 +4,8 @@
       "module": "es6",
       "declaration": true,
       "outDir": "./assets/js/",
-      "strict": true
+      "strict": true,
+      "sourceMap": true
     },
     "include": ["./assets/typescript/*.ts"],
     "exclude": ["node_modules", "**/__tests__/*"]

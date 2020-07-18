@@ -1,4 +1,4 @@
-export default class themeService {
+export default class ThemeService {
     private _activeTheme;
     get activeTheme(): Themes;
     constructor();
